@@ -70,7 +70,7 @@ if page == "Кофе":
     from torchvision.models import resnet18, ResNet18_Weights
     model_coffe = resnet18(weights=ResNet18_Weights.DEFAULT)
     model_coffe.fc = nn.Linear(512,4)
-    model_coffe.load_state_dict(torch.load('/Users/uladzislauyermakou/PHASE-2/ds-phase-2/08-nn/Coffee-and-agriculture/models/coffee_save.pt', map_location=torch.device('cpu')))
+    model_coffe.load_state_dict(torch.load('models/coffee_save.pt', map_location=torch.device('cpu')))
     model_coffe.eval()
     coffee_dict = {0: 'Dark', 1: 'Green', 2: 'Light', 3: 'Medium'}
 
@@ -106,7 +106,7 @@ if page == "Агрокультуры":
     from torchvision.models import resnet18, ResNet18_Weights
     model_agri = resnet18(pretrained=True)
     model_agri.fc = nn.Linear(512,30)
-    model_agri.load_state_dict(torch.load('/Users/uladzislauyermakou/PHASE-2/ds-phase-2/08-nn/Coffee-and-agriculture/models/agricultural_save_18.pt', map_location=torch.device('cpu')))
+    model_agri.load_state_dict(torch.load('models/agricultural_save_18.pt', map_location=torch.device('cpu')))
     model_agri.eval()
     agri_dict = {0: 'gram', 1: 'sugarcane', 2: 'Tobacco-plant', 3: 'Lemon', 4: 'rice', 5: 'Pearl_millet(bajra)', 6: 'cotton', 7: 'cucumber', 8: 'chilli', 9: 'cherry', 10: 'cardamom', 11: 'tea', 12: 'jowar', 13: 'Olive-tree', 14: 'wheat', 15: 'vigna-radiati(Mung)', 16: 'coconut', 17: 'Fox_nut(Makhana)', 18: 'almond', 19: 'clove', 20: 'coffee-plant', 21: 'mustard-oil', 22: 'jute', 23: 'banana', 24: 'soyabean', 25: 'papaya', 26: 'pineapple', 27: 'tomato', 28: 'sunflower', 29: 'maize'}
 
