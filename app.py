@@ -74,14 +74,14 @@ if page == "Кофе":
     model_coffe.eval()
     coffee_dict = {0: 'Dark', 1: 'Green', 2: 'Light', 3: 'Medium'}
 
-    image_url = st.text_input("Введите URL картинки кофейного зерна")
-    image = None
+    # image_url = st.text_input("Введите URL картинки кофейного зерна")
+    # image = None
 
-    if image_url:
-                response = requests.get(image_url)
-                image = Image.open(io.BytesIO(response.content))
-                st.subheader('Загруженная картинка')
-                st.image(image)
+    # if image_url:
+    #             response = requests.get(image_url)
+    #             image = Image.open(io.BytesIO(response.content))
+    #             st.subheader('Загруженная картинка')
+    #             st.image(image)
 
     uploaded_file = st.file_uploader("Перетащите картинку сюда или кликните для выбора файла", type=['png', 'jpg', 'jpeg'])
 
@@ -112,14 +112,14 @@ if page == "Агрокультуры":
 
 
     
-    image_url = st.text_input("Введите URL картинки агрокультуры")
-    image = None
+    # image_url = st.text_input("Введите URL картинки агрокультуры")
+    # image = None
 
-    if image_url:
-                response = requests.get(image_url)
-                image = Image.open(io.BytesIO(response.content))
-                st.subheader('Загруженная картинка')
-                st.image(image)
+    # if image_url:
+    #             response = requests.get(image_url)
+    #             image = Image.open(io.BytesIO(response.content))
+    #             st.subheader('Загруженная картинка')
+    #             st.image(image)
     
     uploaded_file = st.file_uploader("Перетащите картинку сюда или кликните для выбора файла", type=['png', 'jpg', 'jpeg'])
 
@@ -153,14 +153,14 @@ if page == "ТОП-5 предсказанных категорий":
     labels = json.load(open('models/coffe_imagenet_class_index.json'))
     decode = lambda x: labels[str(x)][1]
     
-    image = None
-    image_url = st.text_input("Введите URL изображения чего угодно")
+    # image = None
+    # image_url = st.text_input("Введите URL изображения чего угодно")
 
-    if image_url:
-                response = requests.get(image_url)
-                image = Image.open(io.BytesIO(response.content))
-                st.subheader('Загруженная картинка')
-                st.image(image)
+    # if image_url:
+    #             response = requests.get(image_url)
+    #             image = Image.open(io.BytesIO(response.content))
+    #             st.subheader('Загруженная картинка')
+    #             st.image(image)
 
     uploaded_file = st.file_uploader("Перетащите картинку сюда или кликните для выбора файла", type=['png', 'jpg', 'jpeg'])
 
