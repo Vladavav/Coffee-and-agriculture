@@ -75,7 +75,7 @@ if page == "Кофе":
     coffee_dict = {0: 'Dark', 1: 'Green', 2: 'Light', 3: 'Medium'}
 
     # image_url = st.text_input("Введите URL картинки кофейного зерна")
-    # image = None
+    image = None
 
     # if image_url:
     #             response = requests.get(image_url)
@@ -113,7 +113,7 @@ if page == "Агрокультуры":
 
     
     # image_url = st.text_input("Введите URL картинки агрокультуры")
-    # image = None
+    image = None
 
     # if image_url:
     #             response = requests.get(image_url)
@@ -153,7 +153,7 @@ if page == "ТОП-5 предсказанных категорий":
     labels = json.load(open('models/coffe_imagenet_class_index.json'))
     decode = lambda x: labels[str(x)][1]
     
-    # image = None
+    image = None
     # image_url = st.text_input("Введите URL изображения чего угодно")
 
     # if image_url:
